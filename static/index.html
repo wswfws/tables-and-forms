@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
@@ -10,9 +10,60 @@
     <h1>Найди себе друга!</h1>
 
     <form method="post" action="/pets/orders">
+        <label for="petType">Какое хочешь животное?</label><br>
+        <input type="text" name="petType" id="petType" placeholder="cat" value="cat">
+        <br>
+        <br>
         <label>
-            <button type="submit" name="reg">button</button>
+            Выбери пол питомца:
+            <br>
+            <input type="radio" name="gender" value="boy" checked> Мужской
+            <br>
+            <input type="radio" name="gender" value="girl"> Женский
+            <br>
+            <input type="radio" name="gender" value="none"> Бесполый
         </label>
+        <br>
+        <br>
+        <label for="eyeColor">Выбери цвет глаз питомца</label><br>
+        <input type="color" name="eyeColor" id="eyeColor" value="#000">
+        <br>
+        <br>
+        <label for="tailLength">Выбери длину хвоста</label><br>
+        7m<input type="range" name="tailLength" id="tailLength" min="7" max="120" step="1">120m
+        <br>
+        <br>
+        <label for="dateOfBirth">Выбери месяц рождения питомца</label><br>
+        <input type="month" name="dateOfBirth" id="dateOfBirth" value="2018-05">
+        <br>
+        <br>
+        <label>
+            Как Вас зовут?
+            <br>
+            <textarea name="name" id="name" minlength="3" maxlength="50">Вася Пупкин</textarea>
+        </label>
+        <br>
+        <br>
+        <label for="email">Укажи свой email</label><br>
+        <input type="email" name="email" id="email" placeholder="email@example.com" value="email@example.com">
+        <br>
+        <br>
+        <label for="phone">Укажи свой номер телефона</label><br>
+        <input type="tel" name="phone" id="phone" placeholder="+7(999) 999-99-99" value="0" required>
+        <br>
+        <br>
+        <label>
+            Правила
+            <br>
+            <input type="checkbox" name="rules" value="true" checked> True
+
+        </label>
+        <br>
+        <br>
+        <label>
+            <button type="submit" name="reg">Отправить форму</button>
+        </label>
+        <br>
         <input type="reset" value="Reset"
                style="background-color: red; color: white" />
     </form>
